@@ -1,8 +1,8 @@
 # DOBIT Proxy Server
 
-This is just a simple, basic node-js proxy server. 
-I've made it to avoid CORS errors while working 
-with external APIs on localhost.
+This is just a simple, basic node-js proxy server.  
+I've made it to avoid CORS errors while working  
+with external APIs on localhost.  
 
 ## USAGE
 
@@ -16,9 +16,9 @@ Now your DOBIT proxy should be running.
 Make requests to it:
 
 ```js
-    fetch(`${BASE_URL}/?url=/api/path/to/resource?param1=true...`)
-        .then(res => res.json())
-        .then(data => console.log(data))
+fetch(`${BASE_URL}/?url=/api/path/to/resource?param1=true...`)
+    .then(res => res.json())
+    .then(data => console.log(data))
 ```
 
 DOBIT will take the query param `url` and forward  
