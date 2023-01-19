@@ -25,6 +25,12 @@ headers.append('Authorization', 'Basic ' + Buffer.from(`${API_NAME}:${API_PASS}`
 
 app.get('/', (req, res) => {
     const { query } = req
+    
+    if (!query.url) {
+        res.sendStatus(400)
+        return
+    }
+
     console.log('Forwarding url:', query.url)
 
     fetch(`${API_URL}/${query.url}`, {
